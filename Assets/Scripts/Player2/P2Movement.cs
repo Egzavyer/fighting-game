@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player1Movement : MonoBehaviour
+public class P2Movement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D coll;
@@ -21,21 +21,7 @@ public class Player1Movement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Jump();
-        }
-
-        //Attack Buttons
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Jump();
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Jump();
-        }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Jump();
         }
@@ -43,11 +29,11 @@ public class Player1Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             MoveLeft();
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.LeftArrow))
         {
             MoveRight();
         }
@@ -56,6 +42,7 @@ public class Player1Movement : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
+
     private void MoveLeft()
     {
         rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
@@ -72,7 +59,6 @@ public class Player1Movement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }
-
     }
 
     private bool IsGrounded()
