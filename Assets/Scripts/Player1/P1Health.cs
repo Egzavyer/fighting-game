@@ -10,5 +10,6 @@ public class P1Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        Debug.Log("P1: " + health);
     }
 }

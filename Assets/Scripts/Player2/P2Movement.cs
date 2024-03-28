@@ -31,26 +31,25 @@ public class P2Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            MoveLeft();
+            MoveRight();
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            MoveRight();
+            MoveLeft();
         }
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
-
     private void MoveLeft()
     {
-        rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(-movementSpeed, rb.velocity.y);
     }
 
     private void MoveRight()
     {
-        rb.velocity = new Vector2(-movementSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
     }
 
     private void Jump()
@@ -59,9 +58,10 @@ public class P2Movement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }
+
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         //Checks if BoxCast is overlapping on Ground
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, ground);
