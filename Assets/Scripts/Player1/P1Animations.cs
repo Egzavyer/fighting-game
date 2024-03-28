@@ -9,11 +9,11 @@ public class P1Animations : MonoBehaviour
     private SpriteRenderer sprite;
     private P1Movement p1Movement;
 
-    private bool jab = false;
-    private bool punch = false;
-    private bool kick = false;
+    private bool atk1 = false;
+    private bool atk2 = false;
+    private bool atk3 = false;
 
-    private enum MovementState { idle, walk, jab, jump, fall, punch, kick }
+    private enum MovementState { idle, walk, atk1, jump, fall, atk2, atk3 }
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -45,19 +45,19 @@ public class P1Animations : MonoBehaviour
             state = MovementState.idle;
         }
 
-        if (jab)
+        if (atk1)
         {
-            state = MovementState.jab;
+            state = MovementState.atk1;
         }
 
-        if (punch)
+        if (atk2)
         {
-            state = MovementState.punch;
+            state = MovementState.atk2;
         }
 
-        if (kick)
+        if (atk3)
         {
-            state = MovementState.kick;
+            state = MovementState.atk3;
         }
 
         if (rb.velocity.y > 0f)
@@ -72,33 +72,33 @@ public class P1Animations : MonoBehaviour
         anim.SetInteger("state", (int)state);
     }
 
-    public void IsJabbing()
+    public void IsAttacking1()
     {
-        jab = true;
+        atk1 = true;
     }
 
-    public void NotJabbing()
+    public void NotAttacking1()
     {
-        jab = false;
+        atk1 = false;
     }
 
-    public void IsPunching()
+    public void IsAttacking2()
     {
-        punch = true;
+        atk2 = true;
     }
 
-    public void NotPunching()
+    public void NotAttacking2()
     {
-        punch = false;
+        atk2 = false;
     }
 
-    public void IsKicking()
+    public void IsAttacking3()
     {
-        kick = true;
+        atk3 = true;
     }
 
-    public void NotKicking()
+    public void NotAttacking3()
     {
-        kick = false;
+        atk3 = false;
     }
 }

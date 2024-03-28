@@ -6,15 +6,6 @@ public class P1Health : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField] private float health = 100f;
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
 
     public void TakeDamage(float damage)
     {

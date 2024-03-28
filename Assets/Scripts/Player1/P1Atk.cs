@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class P1Atk : MonoBehaviour
 {
-    private BoxCollider2D jabHitboxColl;
-    private BoxCollider2D punchHitboxColl;
-    private BoxCollider2D kickHitboxColl;
+    private BoxCollider2D atk1HitboxColl;
+    private BoxCollider2D atk2HitboxColl;
+    private BoxCollider2D atk3HitboxColl;
     private P1Animations p1Animations;
     private P1Movement p1Movement;
     void Start()
     {
-        jabHitboxColl = transform.Find("JabHitbox").GetComponent<BoxCollider2D>();
-        punchHitboxColl = transform.Find("PunchHitbox").GetComponent<BoxCollider2D>();
-        kickHitboxColl = transform.Find("KickHitbox").GetComponent<BoxCollider2D>();
+        atk1HitboxColl = transform.Find("Atk1Hitbox").GetComponent<BoxCollider2D>();
+        atk2HitboxColl = transform.Find("Atk2Hitbox").GetComponent<BoxCollider2D>();
+        atk3HitboxColl = transform.Find("Atk3Hitbox").GetComponent<BoxCollider2D>();
 
         p1Animations = GetComponent<P1Animations>();
         p1Movement = GetComponent<P1Movement>();
@@ -23,53 +23,53 @@ public class P1Atk : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && p1Movement.IsGrounded())
         {
-            Invoke(nameof(ActivateJabHitbox), 0.1f);
+            Invoke(nameof(ActivateAtk1Hitbox), 0.1f);
         }
 
         if (Input.GetKeyDown(KeyCode.X) && p1Movement.IsGrounded())
         {
-            Invoke(nameof(ActivatePunchHitbox), 0.1f);
+            Invoke(nameof(ActivateAtk2Hitbox), 0.1f);
         }
 
         if (Input.GetKeyDown(KeyCode.C) && p1Movement.IsGrounded())
         {
-            Invoke(nameof(ActivateKickHitbox), 0.1f);
+            Invoke(nameof(ActivateAtk3Hitbox), 0.1f);
         }
     }
 
-    private void ActivateJabHitbox()
+    private void ActivateAtk1Hitbox()
     {
-        jabHitboxColl.enabled = true;
-        p1Animations.IsJabbing();
+        atk1HitboxColl.enabled = true;
+        p1Animations.IsAttacking1();
     }
 
-    public void DeactivateJabHitbox()
+    public void DeactivateAtk1Hitbox()
     {
-        jabHitboxColl.enabled = false;
-        p1Animations.NotJabbing();
+        atk1HitboxColl.enabled = false;
+        p1Animations.NotAttacking1();
     }
 
-    private void ActivatePunchHitbox()
+    private void ActivateAtk2Hitbox()
     {
-        punchHitboxColl.enabled = true;
-        p1Animations.IsPunching();
+        atk2HitboxColl.enabled = true;
+        p1Animations.IsAttacking2();
     }
 
-    public void DeactivatePunchHitbox()
+    public void DeactivateAtk2Hitbox()
     {
-        punchHitboxColl.enabled = false;
-        p1Animations.NotPunching();
+        atk2HitboxColl.enabled = false;
+        p1Animations.NotAttacking2();
     }
 
-    private void ActivateKickHitbox()
+    private void ActivateAtk3Hitbox()
     {
-        kickHitboxColl.enabled = true;
-        p1Animations.IsKicking();
+        atk3HitboxColl.enabled = true;
+        p1Animations.IsAttacking3();
     }
 
-    public void DeactivateKickHitbox()
+    public void DeactivateAtk3Hitbox()
     {
-        kickHitboxColl.enabled = false;
-        p1Animations.NotKicking();
+        atk3HitboxColl.enabled = false;
+        p1Animations.NotAttacking3();
     }
 }

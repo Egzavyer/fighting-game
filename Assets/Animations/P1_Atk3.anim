@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: P1_Jab
+  m_Name: P1_Atk3
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,11 +21,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -542113860, guid: 25617a63154264583b25a783966923b9, type: 3}
+      value: {fileID: -1063384103, guid: fd940910b2f47408395b35de2f790a29, type: 3}
     - time: 0.05
-      value: {fileID: 752690310, guid: 2e8585c143af941dfa848e10b4fa590d, type: 3}
+      value: {fileID: 2147407688, guid: d85638a562eb348c9abd132808f49457, type: 3}
     - time: 0.1
-      value: {fileID: -64768280, guid: ea107eaabed7e47cd93cd78185f3c573, type: 3}
+      value: {fileID: 1021933650, guid: 7a2573429c3024a10a13d86c92cb996d, type: 3}
+    - time: 0.15
+      value: {fileID: -758057544, guid: aadb879bfdd84448a82c0ddfa64e5e1e, type: 3}
+    - time: 0.2
+      value: {fileID: 1702101053, guid: 4f7ccb050cacf48e9a738c191679e4e3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,15 +52,17 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -542113860, guid: 25617a63154264583b25a783966923b9, type: 3}
-    - {fileID: 752690310, guid: 2e8585c143af941dfa848e10b4fa590d, type: 3}
-    - {fileID: -64768280, guid: ea107eaabed7e47cd93cd78185f3c573, type: 3}
+    - {fileID: -1063384103, guid: fd940910b2f47408395b35de2f790a29, type: 3}
+    - {fileID: 2147407688, guid: d85638a562eb348c9abd132808f49457, type: 3}
+    - {fileID: 1021933650, guid: 7a2573429c3024a10a13d86c92cb996d, type: 3}
+    - {fileID: -758057544, guid: aadb879bfdd84448a82c0ddfa64e5e1e, type: 3}
+    - {fileID: 1702101053, guid: 4f7ccb050cacf48e9a738c191679e4e3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.15
+    m_StopTime: 0.25
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -76,8 +82,8 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.15
-    functionName: DeactivateJabHitbox
+  - time: 0.25
+    functionName: DeactivateAtk3Hitbox
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

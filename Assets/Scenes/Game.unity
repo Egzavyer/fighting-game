@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 150936547}
   - component: {fileID: 150936548}
   m_Layer: 0
-  m_Name: JabHitbox
+  m_Name: Atk1Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 450030760}
   - component: {fileID: 450030761}
   m_Layer: 0
-  m_Name: KickHitbox
+  m_Name: Atk3Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1121,7 +1121,7 @@ GameObject:
   - component: {fileID: 1627898158}
   - component: {fileID: 1627898159}
   m_Layer: 0
-  m_Name: PunchHitbox
+  m_Name: Atk2Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

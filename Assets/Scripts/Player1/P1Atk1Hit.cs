@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class P1PunchHit : MonoBehaviour
+public class P1Atk1Hit : MonoBehaviour
 {
     [SerializeField] private GameObject player2;
     [SerializeField] private P2Health p2Health;
@@ -14,7 +14,7 @@ public class P1PunchHit : MonoBehaviour
     {
         if (other.CompareTag("Player2"))
         {
-            p2Health.TakeDamage(20f);
+            p2Health.TakeDamage(10f);
         }
     }
 }
