@@ -6,18 +6,36 @@ using UnityEngine.UI;
 public class Player1Movement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private BoxCollider2D coll;
 
     [SerializeField] private float movementSpeed = 10.0f;
     [SerializeField] private float jumpHeight = 15.0f;
 
+    [SerializeField] private LayerMask ground;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<BoxCollider2D>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
+        {
+            Jump();
+        }
+
+        //Attack Buttons
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Jump();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Jump();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
         {
             Jump();
         }
@@ -50,6 +68,16 @@ public class Player1Movement : MonoBehaviour
 
     private void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+        if (IsGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+        }
+
+    }
+
+    private bool IsGrounded()
+    {
+        //Checks if BoxCast is overlapping on Ground
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, ground);
     }
 }
