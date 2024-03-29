@@ -1447,12 +1447,12 @@ GameObject:
   - component: {fileID: 1760831535}
   - component: {fileID: 1760831534}
   - component: {fileID: 1760831532}
-  - component: {fileID: 1760831536}
-  - component: {fileID: 1760831537}
   - component: {fileID: 1760831540}
-  - component: {fileID: 1760831541}
   - component: {fileID: 1760831542}
   - component: {fileID: 1760831543}
+  - component: {fileID: 1760831537}
+  - component: {fileID: 1760831536}
+  - component: {fileID: 1760831541}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player1
