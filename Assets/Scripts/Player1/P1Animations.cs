@@ -12,8 +12,9 @@ public class P1Animations : MonoBehaviour
     private bool atk1 = false;
     private bool atk2 = false;
     private bool atk3 = false;
+    private bool hit = false;
 
-    private enum MovementState { idle, walk, atk1, jump, fall, atk2, atk3 }
+    private enum MovementState { idle, walk, atk1, jump, fall, atk2, atk3, hit }
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -69,6 +70,11 @@ public class P1Animations : MonoBehaviour
             state = MovementState.fall;
         }
 
+        if (hit)
+        {
+            state = MovementState.hit;
+        }
+
         anim.SetInteger("state", (int)state);
     }
 
@@ -100,5 +106,15 @@ public class P1Animations : MonoBehaviour
     public void NotAttacking3()
     {
         atk3 = false;
+    }
+
+    public void IsHit()
+    {
+        hit = true;
+    }
+
+    public void NotHit()
+    {
+        hit = false;
     }
 }
