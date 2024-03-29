@@ -17,6 +17,5 @@ public class P1Health : MonoBehaviour
         health -= damage;
         p1Animations.IsHit();
         Debug.Log("P1: " + health);
-
     }
 }

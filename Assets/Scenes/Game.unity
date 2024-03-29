@@ -210,11 +210,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 107229832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c8f45cb8f293f94fa128ea63303bbbe, type: 3}
+  m_Script: {fileID: 11500000, guid: 9baaaedbcd5a7e9408afbea80a26faa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 1760831531}
-  p1Health: {fileID: 0}
+  otherPlayer: {fileID: 1760831531}
+  health: {fileID: 0}
 --- !u!1 &150936545
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,11 +302,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 150936545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c6c943c8374e4343b4582825fcda85e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9baaaedbcd5a7e9408afbea80a26faa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player2: {fileID: 1452617041}
-  p2Health: {fileID: 0}
+  otherPlayer: {fileID: 1452617041}
+  health: {fileID: 0}
 --- !u!1 &274966968
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,11 +394,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 274966968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02b0f8527d6086341bf28546ad8b7b4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6692aeebcafd348409261954eecd4351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 1760831531}
-  p1Health: {fileID: 0}
+  otherPlayer: {fileID: 1760831531}
+  health: {fileID: 0}
 --- !u!1 &450030758
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,11 +486,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 450030758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43505cef9931e274da0197f1a1b02371, type: 3}
+  m_Script: {fileID: 11500000, guid: 6692aeebcafd348409261954eecd4351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player2: {fileID: 1452617041}
-  p2Health: {fileID: 0}
+  otherPlayer: {fileID: 1452617041}
+  health: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,10 +1116,10 @@ GameObject:
   - component: {fileID: 1452617042}
   - component: {fileID: 1452617047}
   - component: {fileID: 1452617049}
+  - component: {fileID: 1452617053}
   - component: {fileID: 1452617052}
   - component: {fileID: 1452617051}
   - component: {fileID: 1452617050}
-  - component: {fileID: 1452617053}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1452617041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3479550976a8ccd4f94799cfc446acbd, type: 3}
+  m_Script: {fileID: 11500000, guid: c4b71c3797fd8dd47af1afd394c8defb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
@@ -1316,7 +1316,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1452617041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 278177dc37150d14ba68e37278cc5079, type: 3}
+  m_Script: {fileID: 11500000, guid: 2788c127d3c14204c8430d483e034e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
@@ -1329,7 +1329,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1452617041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 756da92f27d1fa646abc467d215a53dd, type: 3}
+  m_Script: {fileID: 11500000, guid: f8b78dedccf200d4d8e2d95161deb01e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1452617053
@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1452617041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 708a7e7d55501e6418a3fa6e99ffe003, type: 3}
+  m_Script: {fileID: 11500000, guid: ae9f84cc70776a644b8ece41348619fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1627898156
@@ -1431,11 +1431,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1627898156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c890529ac83eca46b9b07a5924f3cfc, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c66c1d0b3fa2204faeffe8bc8f2b8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player2: {fileID: 1452617041}
-  p2Health: {fileID: 0}
+  otherPlayer: {fileID: 1452617041}
+  health: {fileID: 0}
 --- !u!1 &1760831531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,10 +1449,10 @@ GameObject:
   - component: {fileID: 1760831532}
   - component: {fileID: 1760831540}
   - component: {fileID: 1760831542}
+  - component: {fileID: 1760831546}
+  - component: {fileID: 1760831545}
+  - component: {fileID: 1760831544}
   - component: {fileID: 1760831543}
-  - component: {fileID: 1760831537}
-  - component: {fileID: 1760831536}
-  - component: {fileID: 1760831541}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player1
@@ -1557,35 +1557,6 @@ Transform:
   - {fileID: 450030759}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1760831536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760831531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8afed7168ccde14db3335fea3f16d54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 10
-  jumpHeight: 15
-  ground:
-    serializedVersion: 2
-    m_Bits: 8
---- !u!114 &1760831537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760831531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c7bad893d62e3441bfc8d1e3613515a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1760831540
 Animator:
   serializedVersion: 5
@@ -1607,18 +1578,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1760831541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760831531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9463c0e267e39364e904c6e657ceee12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1760831542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1673,10 +1632,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 1760831531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b0e64621aa57504fb59542671fcaaee, type: 3}
+  m_Script: {fileID: 11500000, guid: c4b71c3797fd8dd47af1afd394c8defb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 10
+  jumpHeight: 15
+  ground:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &1760831544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760831531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2788c127d3c14204c8430d483e034e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &1760831545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760831531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b78dedccf200d4d8e2d95161deb01e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1760831546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760831531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9f84cc70776a644b8ece41348619fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2080632067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,11 +1799,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2138061515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86b9e54d112bdc04db1e4f46ec004ab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c66c1d0b3fa2204faeffe8bc8f2b8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 1760831531}
-  p1Health: {fileID: 0}
+  otherPlayer: {fileID: 1760831531}
+  health: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
