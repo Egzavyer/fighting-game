@@ -28,15 +28,17 @@ public class Animations : MonoBehaviour
 
     private void UpdateAnimationState()
     {
-        MovementState state;
-        if (rb.velocity.x > 0f && movement.IsGrounded())
+        MovementState state = MovementState.idle;
+        if (rb.velocity.x > 0f)
         {
-            state = MovementState.walk;
+            if (movement.IsGrounded())
+                state = MovementState.walk;
             sprite.flipX = false;
         }
-        else if (rb.velocity.x < 0f && movement.IsGrounded())
+        else if (rb.velocity.x < 0f)
         {
-            state = MovementState.walk;
+            if (movement.IsGrounded())
+                state = MovementState.walk;
             sprite.flipX = true;
         }
         else
