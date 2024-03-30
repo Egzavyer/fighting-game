@@ -10,11 +10,20 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private LayerMask ground;
 
+    private float rightEdge;
+    private float leftEdge;
+    private bool leftObstructed = false;
+    private bool rightObstructed = false;
+
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
+
+        rightEdge = (coll.size.x * 0.5f) - coll.offset.x;
+        leftEdge = -rightEdge;
     }
 
     void Update()
@@ -28,17 +37,14 @@ public class Movement : MonoBehaviour
         {
             Jump();
         }
-    }
 
-    private void FixedUpdate()
-    {
         if (gameObject.name == "Player1")
         {
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) && !rightObstructed)
             {
                 MoveRight();
             }
-            else if (Input.GetKey(KeyCode.A))
+            else if (Input.GetKey(KeyCode.A) && !leftObstructed)
             {
                 MoveLeft();
             }
@@ -50,11 +56,11 @@ public class Movement : MonoBehaviour
 
         if (gameObject.name == "Player2")
         {
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow) && !rightObstructed)
             {
                 MoveRight();
             }
-            else if (Input.GetKey(KeyCode.LeftArrow))
+            else if (Input.GetKey(KeyCode.LeftArrow) && !leftObstructed)
             {
                 MoveLeft();
             }
@@ -63,6 +69,8 @@ public class Movement : MonoBehaviour
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }
         }
+
+        IsObstructed();
     }
     private void MoveLeft()
     {
@@ -87,5 +95,29 @@ public class Movement : MonoBehaviour
     {
         //Checks if BoxCast is overlapping on Ground
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, ground);
+    }
+
+    public void IsObstructed()
+    {
+        RaycastHit2D rightRay = Physics2D.Raycast(transform.position + new Vector3(rightEdge + 0.01f, 0, 0), Vector2.right, 0.1f);
+        RaycastHit2D leftRay = Physics2D.Raycast(transform.position + new Vector3(leftEdge - 0.01f, 0, 0), Vector2.left, 0.1f);
+
+        if (rightRay)
+        {
+            rightObstructed = true;
+        }
+        else
+        {
+            rightObstructed = false;
+        }
+
+        if (leftRay)
+        {
+            leftObstructed = true;
+        }
+        else
+        {
+            leftObstructed = false;
+        }
     }
 }
