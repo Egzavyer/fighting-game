@@ -1,5 +1,5 @@
 # fighting-game
- 2D Fighting Game
+ *WORK IN PROGRESS* 2D Fighting Game made in the Unity Game Engine and coded in C#. My first non-remake Unity project. Check back often for new features!
 
 #Feature Checklist
 
