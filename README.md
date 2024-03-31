@@ -12,6 +12,7 @@ Basics:
 - Music
 - Local VS
 - Combo Counter
+- Rally System
 
 Arcade Mode:
 - Exists
