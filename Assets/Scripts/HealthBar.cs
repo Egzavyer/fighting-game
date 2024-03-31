@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthBar : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class HealthBar : MonoBehaviour
     private Health healthScript;
     public Image frontHealthbar;
     public Image backHealthbar;
+    public TMP_Text healthbarText;
 
     public float chipSpeed = 2f;
     float lerpTimer;
@@ -19,14 +21,13 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
+        healthScript.health = Mathf.Clamp(healthScript.health, 0f, healthScript.maxHealth);
         UpdateHealthbarUI();
     }
 
     public void UpdateHealthbarUI()
     {
-        float fillFront = frontHealthbar.fillAmount;
         float fillBack = backHealthbar.fillAmount;
-
         float healthFraction = healthScript.health / healthScript.maxHealth;
 
         if (fillBack > healthFraction)
@@ -36,6 +37,7 @@ public class HealthBar : MonoBehaviour
             lerpTimer += Time.deltaTime;
             float percentComplete = lerpTimer / chipSpeed;
             backHealthbar.fillAmount = Mathf.Lerp(fillBack, healthFraction, percentComplete);
+            healthbarText.text = healthScript.health.ToString();
         }
     }
 }

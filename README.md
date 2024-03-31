@@ -4,7 +4,7 @@
 #Feature Checklist
 
 Basics:
-- Health Bars
+- Health Bars ✅
 - Super Meters
 - Character Portraits
 - Character Select

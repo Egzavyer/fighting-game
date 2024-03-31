@@ -13,11 +13,6 @@ public class Health : MonoBehaviour
         health = maxHealth;
     }
 
-    private void Update()
-    {
-        health = Mathf.Clamp(health, 0f, maxHealth);
-    }
-
     public void TakeDamage(float damage)
     {
         health -= damage;
