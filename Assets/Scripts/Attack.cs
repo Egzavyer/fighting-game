@@ -24,16 +24,22 @@ public class Attack : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Z) && Movement.IsGrounded())
             {
                 Invoke(nameof(ActivateAtk1Hitbox), 0.1f);
+                DeactivateAtk2Hitbox();
+                DeactivateAtk3Hitbox();
             }
 
             if (Input.GetKeyDown(KeyCode.X) && Movement.IsGrounded())
             {
                 Invoke(nameof(ActivateAtk2Hitbox), 0.1f);
+                DeactivateAtk1Hitbox();
+                DeactivateAtk3Hitbox();
             }
 
             if (Input.GetKeyDown(KeyCode.C) && Movement.IsGrounded())
             {
                 Invoke(nameof(ActivateAtk3Hitbox), 0.1f);
+                DeactivateAtk1Hitbox();
+                DeactivateAtk2Hitbox();
             }
         }
 
@@ -42,16 +48,22 @@ public class Attack : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.M) && Movement.IsGrounded())
             {
                 Invoke(nameof(ActivateAtk1Hitbox), 0.1f);
+                DeactivateAtk2Hitbox();
+                DeactivateAtk3Hitbox();
             }
 
             if (Input.GetKeyDown(KeyCode.Comma) && Movement.IsGrounded())
             {
                 Invoke(nameof(ActivateAtk2Hitbox), 0.1f);
+                DeactivateAtk1Hitbox();
+                DeactivateAtk3Hitbox();
             }
 
             if (Input.GetKeyDown(KeyCode.Period) && Movement.IsGrounded())
             {
                 Invoke(nameof(ActivateAtk3Hitbox), 0.1f);
+                DeactivateAtk1Hitbox();
+                DeactivateAtk2Hitbox();
             }
         }
     }
