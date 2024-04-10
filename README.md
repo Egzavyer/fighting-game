@@ -1,5 +1,5 @@
 # fighting-game
- *WORK IN PROGRESS* 2D Fighting Game made in the Unity Game Engine and coded in C#. My first non-remake Unity project. Check back often for new features!
+ *PROGRESS PAUSED* A very basic 2D Fighting Game made in the Unity Game Engine and coded in C#. My first non-remake Unity project. Below are some features I'd like to add eventually if I come back to it.
 
  Player 1 sprite by Ansimuz from the Streets of Fight pack on the Unity Asset Store. <br>
  Player 2 sprite by Luiz Melo from the Medieval Warrior Pack 2 on the Unity Asset Store.
